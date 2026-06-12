@@ -1,9 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Upload from "./pages/Upload";
+import Watch from "./pages/Watch";
 
 function App() {
   return (
-    <h1>Welcome to StreamSphere !! </h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/upload" element={<Upload />} />
+        <Route path="/watch" element={<Watch />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-
-export default App
+export default App;
